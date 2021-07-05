@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand justify-content-center">Git commands</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">About Me</a>
+            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="resources.html">Resources</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading"></h1>
+
+        <img src = "Screenshot from 2021-07-05 22-12-53.png">
+        <p>Below are some of the common Git Commands:</p><br>
+        <ol>
+          <li>
+          <code>git init</code>
+        </li>
+          <p>While in the directory you wish to make a git repository the above command will initialize a git repository in that directory.</p>
+          <li>
+            <code>git add 'file or directory name'</code>
+          </li>
+          <p>
+            Adds files in the to the staging area for Git.
+             Before a file is available to commit to a repository, the file needs to be added to the Git index (staging area).
+             There are a few different ways to use git add, by adding entire directories, specific files, or all unstaged files.
+           </p>
+           <li>
+             <code>$ git commit -m "comit message in quotes"</code>
+           </li>
+           <p>
+             Record the changes made to the files to a local repository. For easy reference, each commit has a unique ID.
+            </p>
+            <li>
+              <code>$ $ git push "remote_URL/remote_name" "branch"</code>
+            </li>
+            <p>
+              Sends local commits to the remote repository. git push requires two parameters: the remote repository and the branch that the push is for.
+             </p>
+             <li>
+               <code>$ $ git pull "branch_name" "remote_URL/remote_name" </code>
+             </li>
+             <p>
+               Is used to get the latest version of a repository.
+              </p>
+              <li>
+                <code>$ $ git merge "branch_name" </code>
+              </li>
+              <p>
+                integrates branches together.
+               </p>
+               <li>
+                 <code>$ $ git checkout -b "new_branch" </code>
+                 <code>$ $ git checkout "branch_name"</code>
+               </li>
+               <p>
+                 Used to start working on a different branch. The -b option creates a new branch.
+                </p>
+        </ol>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Socials <a href="https://twitter.com/MboghoBill">twitter</a>.</p>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
