@@ -1,0 +1,3 @@
+[submodule "iDocs"]
+	path = iDocs
+	url = https://github.com/harnishdesign/iDocs
