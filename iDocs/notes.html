@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 <link href="assets/images/favicon.png" rel="icon" />
-<title>Sudoku-Crypto</title>
-<meta name="description" content="Sudoku-Crypto was a small project created to test out the concept of crypto-currency mining.">
-<meta name="Gear-Box UoN Attachees 2021" content="harnishdesign.net">
+<title>Notes</title>
+<meta name="description" content="These are rough sketches and notes of stuff I keep on forgetting">
+<meta name="mpily" content="harnishdesign.net">
 
 <!-- Stylesheet
 ============================== -->
@@ -99,9 +99,9 @@
       <ul class="nav flex-column ">
         <li class="nav-item"><a class="nav-link active" href="#idocs_start">Getting Started</a>
           <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#Git_commands">Git And GitHub Commands</a></li>
-            <li class="nav-item"><a class="nav-link" href="#2FA">2 Factor Authentication</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_sass">Sass</a></li>
+            <li class="nav-item"><a class="nav-link" href="#git">Git And GitHub Commands</a></li>
+            <li class="nav-item"><a class="nav-link" href="#2FA">MultiFactor Factor Authentication</a></li>
+            <li class="nav-item"><a class="nav-link" href="#IOTProtocols">IOT Communication Protocols</a></li>
             <li class="nav-item"><a class="nav-link" href="#idocs_color_schemes">Color Schemes</a></li>
             <li class="nav-item"><a class="nav-link" href="#idocs_theme_customization">Customization</a></li>
             <li class="nav-item"><a class="nav-link" href="#idocs_logo_settings">Logo Settings</a></li>
@@ -155,15 +155,10 @@
         <!-- Getting Started
 		============================ -->
         <section id="idocs_start">
-        <h1>Documentation For Sudoku-Crypto</h1>
+        <h1>Notes For mpily</h1>
         <h2>About</h2>
-        <p class="lead">Sudoku-Crypto is a small project that was designed by the Attachees from the University of Nairobi at GearBox.
-          The project had 2 sides. The server side and the user side. In the server side, a Node MCU was used to generate the sudoku puzzles and send notifications when a person solved the sudoku.
-          The server side was programmed using Arduino language which has syntax very similar to the C syntax. On the front end an Android application was used to display the sudoku puzzle to be solved and also facilitate interaction with the 
-          Node MCU. Flutter was used due to its versitility. For the communication between the android phones and the server UDP was used.
-          The team got to learn how to work with these technologies as for most of us this was the first time using these technologies.
-          The code for the front end can be viewed <a href="https://github.com/AlvyneZ/sudoku_crypto">here</a>.
-          My role in the project was writing the code for communication from the mobile app and also part of the sudoku class. I shall speak on these here.
+        <p class="lead">This is a sort of rough notebook where I keep rough notes and short cuts for stuff I usually forget. Feel free to go through them. Though they are highly tailored for my use and thus might not suit you as well.
+
 
         </p>
 		<hr>
@@ -186,10 +181,11 @@
         
 		<hr class="divider">
 		
-        <!-- Overview of UDP
+        <!-- Git Commands
 		============================ -->
-        <section id="#Git_commands">
-            <img src = "images/Screenshot from 2021-07-05 22-12-53.png">
+        <section id="git">
+            <h2>Some basic Git and GitHub Commands</h2>
+            <img src = "assets/images/Screenshot from 2021-07-05 22-12-53.png">
             <p>Below are some of the common Git Commands:</p><br>
             <ol>
               <li>
@@ -240,49 +236,38 @@
         
 		<hr class="divider">
 		
-        <!-- UDP in dart
+        <!-- 2FA
 		============================ -->
-        <section id="UDP_communication_dart">
-          <h2>UDP Communication In Dart</h2>
+        <section id="2FA">
+          <h2>MultiFactor Authentication</h2>
+          <h3>What is MultiFactor Authentication</h3>
           <p>
-            UDP communication in dart can be achieved using the dart library <a href="https://api.dart.dev/stable/2.13.4/dart-io/dart-io-library.html">'dart:io'</a>'.
-            It contains access to classes required for accessing sockets that are used during internet connection. Below is a code snippet from the project. It 
-            is the class that was used to handle the communication from the android devices. Many of the functions are asynchronous thus Futures were required.
-            For this reason, the dart library <a href = "https://dart.dev/codelabs/async-await">'dart:async'</a> was also required.
+            It is an electronic authentication method in which a user is granted access to a website or application only after successfully presenting two or more pieces of evidence (or factors) to an authentication mechanism: knowledge (something only the user knows), possession (something only the user has), and inherence (something only the user is). MFA protects the user from an unknown person trying to access their data such as personal ID details or financial assets. 
+
           </p>
-          <pre><code class="html">
-            class packetHandler {
-              int portNumber = 50000;
-              String? destIpString;
-              late RawDatagramSocket
-                  socketConnection; //the socket connection that will be carrying out the udp message sending
-            
-              packetHandler();
-            
-              Future &lt; void &gt; initializeIp(int number) async {
-                this.socketConnection =
-                    await RawDatagramSocket.bind(InternetAddress.anyIPv4, number);
-                this.portNumber = number;
-                this.destIpString = "192.168.43.235"; //hard coded value contains ip of server
-              }
-            
-              void sendData(String stringToSend) {
-                List &lt; int &gt; buffer = ascii.encode(stringToSend);
-                InternetAddress destAddress = InternetAddress(this.destIpString!);
-                socketConnection.send(buffer, destAddress, this.portNumber);
-              }
-            }
-              
-          </code></pre>
+          <h3>Why Use MultiFactor Authentication</h3>
           <p>
-            UDP communication in dart is achieved using datagram sockets. In particular the class RawDatagramSocket is used to achieve this.
-            the RawDatagramSocket is bound to an IP address and a port number using the code <code>RawDatagramSocket.bind(Ip,port)</code>. 
-            As this requires both an IP address and a port number, it was seen not to require it to be done during instantiation.
-            In order to send a UDP packet, the RawDatagramSocket requires a destination IP address, destination port number and Ascii encoded string.
+            
+          </p>
+          <h3>Who is Using MultiFactor Authentication</h3>
+          <p>
+
+          </p>
+          <h3>Types of MultiFactor Authentication</h3>
+          <p>
 
           </p>
         </section>
-        
+        <hr class="divider">
+		
+        <!-- 2FA
+		============================ -->
+        <section id="IOTProtocols">
+            <h2>IOT Communication Protocols</h2>
+            <p>
+  
+            </p>
+          </section>
 		<hr class="divider">
 		        
 		
