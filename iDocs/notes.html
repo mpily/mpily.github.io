@@ -102,7 +102,7 @@
             <li class="nav-item"><a class="nav-link" href="#git">Git And GitHub Commands</a></li>
             <li class="nav-item"><a class="nav-link" href="#2FA">MultiFactor Factor Authentication</a></li>
             <li class="nav-item"><a class="nav-link" href="#IOTProtocols">IOT Communication Protocols</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_color_schemes">Color Schemes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Microprocessors">Microprocessors and Microcontrollers</a></li>
             <li class="nav-item"><a class="nav-link" href="#idocs_theme_customization">Customization</a></li>
             <li class="nav-item"><a class="nav-link" href="#idocs_logo_settings">Logo Settings</a></li>
           </ul>
@@ -243,158 +243,134 @@
           <h3>What is MultiFactor Authentication</h3>
           <p>
             It is an electronic authentication method in which a user is granted access to a website or application only after successfully presenting two or more pieces of evidence (or factors) to an authentication mechanism: knowledge (something only the user knows), possession (something only the user has), and inherence (something only the user is). MFA protects the user from an unknown person trying to access their data such as personal ID details or financial assets. 
-
+            <img src = "assets/images/mfapic.png">
           </p>
           <h3>Why Use MultiFactor Authentication</h3>
           <p>
-            
+            Simple one step verification is just not enough. Not even for Google. <a href= "https://money.cnn.com/2017/11/09/technology/google-hackers-research/index.html">Google admitted that hackes steal about 250000 web logins each weed</a> 
+            In MFA we aren't doing away with passwords and logins, we instead are layering another layer of information. For example someone could link a cell phone to the account and then during login they are asked to provide evidence that they are the owner through 
+            receiving a message from the cell phone. 
+            <img src = "assets/images/mfavisual.png">
           </p>
           <h3>Who is Using MultiFactor Authentication</h3>
           <p>
+            <ul>
+             <li>
+               At the top of the list is definitely Google.<a href = "https://techcrunch.com/2011/02/10/google-rolls-out-two-factor-authentication-for-everyone-you-should-use-it/"> In fact Google has been using it since 2011</a>
+            </li>
+            <li>
+              Git Hub is also moving to 2FA. In fact you can configure 2FA on your Git Hub account by following <a href = "https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication">these steps</a>
+            </li>
+            <li>Microsoft Azure. Obviously given how valuable their data is<a href="https://www.microsoft.com/en-ww/security/business/identity-access-management/mfa-multi-factor-authentication">You can read more about it here</a></li>
 
+
+              </ul>
+              To Name but a few.
           </p>
           <h3>Types of MultiFactor Authentication</h3>
-          <p>
+          <ul>
+            <li>
+               Time Based One Time Password: Automatically generates an authentication code that changes after a certain period of time. You can use apps such as :
+            </li>
 
-          </p>
+            <li>
+              Two Factor authentication using text message:
+            </li>
+            <li>
+              Using a Security Key: Can use finger Print or Window Hello.
+            </li>
+          </ul>
         </section>
         <hr class="divider">
 		
-        <!-- 2FA
+        <!-- IOT Protocols
 		============================ -->
         <section id="IOTProtocols">
             <h2>IOT Communication Protocols</h2>
             <p>
-  
+              We know that at the foundation of IoT is the communication aspect. The sending and receiving of information. The question at hand is how to do this.
+              The following Internet Protocols can be used to accomplish this task:
+              <ol>
+                <li>
+                  <h3>HTTP</h3>
+                  <p>
+                    This is one of the simplest means. In this case the controller sends information to a webpage.
+                    In HTTP we use the POST and GET  routines in order to achieve the communication. Taking an example of a NODE MCU that is used to
+                    keep a record of the weather in a particular location, the MCU will 'POST' the data to a web server/API and receive an OK HTTP response from the server.
+                    An Outline of this process may look like: <img src = "assets/images/httpflow.png">
+                    The output may end up looking like this: <img src = "assets/images/httpusingnodemcu.png">
+                    Unfortunately HTTP is not very secure and thus for crucial applications such as in hospitals is not appropriate.
+
+                  </p>
+                </li>
+                <li>
+                  <h3>UDP</h3>
+                  <p>
+                    User Datagram Protocol is one of the core members of the internet protocol suite. It allows computers to send 
+            messages (datagrams) to other computers in an IP network. UDP uses a simple connectionless communication model with a minimum of protocol mechanisms. It has no handshaking dialogues, and thus exposes the user's program to any unreliability of the underlying network; there is no guarantee of delivery, ordering, or duplicate protection.
+            UDP is suitable for purposes where error checking and correction are either not necessary or are performed in the application; UDP avoids the overhead of such processing in the protocol stack. Time sensitive applications often use UDP because dropping packets is preferable to waiting for packets delayed due to retransmission, which may not be an option in a real-time system.
+            UDP is also advantageous in that it allows clients to communicate to each other without the need of a web server.
+            <img src = "assets/images/udpprev.png">
+                  </p>
+                </li>
+                <li>
+                  <h3>TCP</h3>
+                  <p>
+                    The main characteristic of TCP is that a connection between client and server is established before data is sent.
+                    The figure below shows the 3-way handshake between 2 hosts P and Q. A 3 way handshake is carried out in which connection between the 2 hosts is established.
+                    Because of this there is less data loss. Also, this 3 way handshake can be used to improve security over the network.
+                  </p>
+                  <img src = "assets/images/tcphandshake.png">
+                </li>
+              </ol>
             </p>
           </section>
 		<hr class="divider">
 		        
-		
-		  <h4>Fonts:</h4>
-          <ul>
-            <li>Icons Font Face - <a target="_blank" href="https://fontawesome.com/">https://fontawesome.com/</a></li>
-          </ul>
-          <h4>Scripts:</h4>
-          <ul>
-            <li>jQuery - <a target="_blank" href="http://www.jquery.com/">http://www.jquery.com/</a></li>
-            <li>Bootstrap 4 - <a target="_blank" href="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
-			<li>Highlight Js - <a target="_blank" href="https://highlightjs.org/">https://highlightjs.org/</a></li>
-			<li>jQuery easing - <a target="_blank" href="http://gsgd.co.uk/sandbox/jquery/easing/">http://gsgd.co.uk/sandbox/jquery/easing/</a></li>
-            <li>Magnific Popup - <a target="_blank" href="http://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a></li>
-          </ul>
-        </section>
-        
-		<hr class="divider">
-		
-		<!-- Support
-		============================ -->
-        <section id="idocs_support">
-          <h2>Support</h2>
-          <p>If this documentation doesn't answer your questions, So, Please send us Email via <a class="btn btn-primary" target="_blank" href="https://themeforest.net/user/harnishdesign#contact">Item Support Page</a></p>
-		  <p> We are located in GMT +5:30 time zone and we answer all questions within 12-24 hours in weekdays. In some rare cases the waiting time can be to 48 hours. (except holiday seasons which might take longer).</p>
-          <div class="alert alert-warning mb-4"><span class="badge badge-danger text-uppercase">Note:</span> While we aim to provide the best support possible, please keep in mind that it only extends to verified buyers and only to issues related to our template like bugs and errors. Custom modifications or third party module implementations are not included.</div>
-		  <h4>Don’t forget to Rate this template
-			<i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i>
-		  </h4>
-		  <div class="alert alert-success">
-            Please Add your Review (Opinion) for Our template. It would be a great support for us.<br>
-            Go to your <strong>Themeforest Profile</strong> > <strong>Downloads Tab</strong> > & then You can Rate & Review for our template.<br>
-			Thank You.
-          </div>
-        </section>
-		
-		<hr class="divider">
-		
-		<!-- More Templates
-		============================ -->
-        <section id="idocs_templates">
-          <h2>More Templates</h2>
-          <p class="lead">Checkout Our Below Premium Templates</p>
-		  
-		  <div class="row">
-		  <div class="col-4 my-3 text-center">
-			<a target="_blank" href="https://themeforest.net/item/x/28476751?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/simone.jpg" alt="">
-			<h6 class="pt-2">Simone - Personal Portfolio Template</h6>
-			</a>
-		  </div>
-		  <div class="col-4 my-3 text-center">
-			<a target="_blank" href="https://themeforest.net/item/x/26454458?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/kenil.jpg" alt="">
-			<h6 class="pt-2">Kenil - Responsive Bootstrap 4 One Page Portfolio Template</h6>
-			</a>
-		  </div>
-		  <div class="col-4 my-3 text-center">
-			<a target="_blank" href="https://themeforest.net/item/x/26313677?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/doon.jpg" alt="">
-			<h6 class="pt-2">Doon - One Page Parallax HTML Template</h6>
-			</a>
-		  </div>
-		  
-		  <div class="col-4 my-3 text-center">
-			<a target="_blank" href="https://themeforest.net/item/x/27172933?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/domainx.jpg" alt="">
-			<h6 class="pt-2">DomainX- Domain for Sale HTML Template</h6>
-			</a>
-		  </div>
-		  <div class="col-4 my-3 text-center">
-			<a target="_blank" href="https://themeforest.net/item/x/28848609?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/oxyy.jpg" alt="">
-			<h6 class="pt-2">Oxyy - Login and Register Form HTML Templates</h6>
-			</a>
-		  </div>
-		  <div class="col-4 my-3 text-center">
-			<a target="_blank" href="https://themeforest.net/item/x/27034971?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/koice.jpg" alt="">
-			<h6 class="pt-2">Koice - Invoice HTML Template</h6>
-			</a>
-		  </div>
-		  
-		  <div class="col-4 my-3 text-center">
-			<a target="_blank" href="https://themeforest.net/item/x/24017808?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/payyed.jpg" alt="">
-			<h6 class="pt-2">Payyed - Money Transfer and Online Payments HTML Template</h6>
-			</a>
-		  </div>
-		  <div class="col-4 my-3 text-center">
-			<a target="_blank" href="https://themeforest.net/item/x/22375065?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/quickai.jpg" alt="">
-			<h6 class="pt-2">Quickai - Recharge & Bill Payment, Booking HTML5 Template</h6>
-			</a>
-		  </div>
-		  </div>
-		  
-		  <p class="text-center"><a class="btn btn-lg btn-primary my-4" target="_blank" href="https://themeforest.net/user/harnishdesign/portfolio?ref=HarnishDesign">Our Portfolio</a></p>
-          
-        </section>
-		
-		<hr class="divider">
-		
-        <!-- Changelog
-		============================ -->
-		
-        <section id="idocs_changelog">
-          <h2>Changelog</h2>
-          <p class="text-4">See what's new added, changed, fixed, improved or updated in the latest versions. </p>
-		  <p class="alert alert-info mb-5"> For Future Updates Follow Us <a target="_blank" href="http://themeforest.net/user/harnishdesign?ref=HarnishDesign">@themeforest</a> / <a target="_blank" href="http://facebook.com/harnishdesign">@facebook</a> / <a target="_blank" href="http://twitter.com/harnishdesign">@twitter</a> / <a target="_blank" href="https://dribbble.com/harnishdesign">@Dribbble</a></p>
-          
-		  <h3 id="v1-1">Version 1.1 <small class="text-muted">(12 Oct, 2020)</small></h3>
-          <ul class="changelog">
-            <li><span class="badge badge-success">Added</span> Your information here for added new feature</li>
-            <li><span class="badge badge-danger">Fixed</span> Some minor bugs for browser compatibility</li>
-			<li><span class="badge badge-danger">Fixed</span> Some minor bugs for responsive</li>
-            <li><span class="badge badge-info">Updated</span> FontAwesome to Latest Version</li>
-			<li><span class="badge badge-info">Updated</span> Bootstrap to Latest Version</li>
-			<li><span class="badge badge-info">Updated</span> Improvements in CSS and JS</li>
-          </ul>
-		  
-		  <hr class="divider">
-		  
-          <h3 id="v1-0">Version 1.0 <small class="text-muted">(8 April, 2020)</small></h3>
-          <p>Initial Release</p>
-        </section>        
-        
-      </div>
-    </div>
-	
-  </div>
+		>
+		        
+		<!-- MICROPROCESSORS VS MICROCONTROLLER-->
+    <section id= "Microprocessors">
+      <h2>MICROPORCESSORS AND MICROCONTROLLERS</h2>
+      <p>
+        A microcontroller is essentially a small computer on a chip. And as such it has memory, a processor and I/O. 
+        Below is the architecture of the Atmega32.A microprocessor on the other handis a computer processor wherein the data
+         processing logic and control is included on a single integrated circuit, or a small number of integrated circuits. The 
+         microprocessor contains the arithmetic, logic, and control circuitry required to perform the functions of a computer’s central processing unit. 
+        Below we have the block diagram of the Z80microprocessor.
+        <table style="width:100%">
+          <tr>
+            <th>Microcontroller</th>
+            <th>Microprocessor it Uses</th>
+          </tr>
+          <tr>
+            <td>Atmega328</td>
+            <td>8-bit AVR</td>
+          </tr>
+          <tr>
+            <td>ESP8266</td>
+            <td>Tensilica Diamond Standard 106Micro (aka. L106) @ 80 MHz (default) or 160 MHz</td>
+          </tr>
+        </table> 
+
+        Above are some famous microcontrollers and the microprocessors they use.
+      </p>
+      <img src = "assets/images/atmega32.png">
+      <figcaption>Atmega32 Architecture</figcaption>
+      <img src = "assets/images/Z80microprocessor.png">
+      <figcaption>Z80microprocessor Architecture</figcaption>
+    </section>
   <!-- Content end --> 
-  
-  <!-- Footer
-  ============================ -->
+  <!-- OSI MODEL-->
+  <section id="OSIMODEL">
+    <h2>OSI Model</h2>
+    <p>
+
+    </p>
+  </section>
+  <hr class="divider">
+  <!--- Footer  
+    ========================== -->
   <footer id="footer" class="section bg-dark footer-text-light">
     <div class="container">
       <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
